@@ -6,7 +6,6 @@ import { getPosts } from '../modules/posts';
 function PostListContainer() {
     const { data, loading, error } = useSelector(state => state.posts.posts);
     const dispatch = useDispatch();
-    console.log("asdf");
     // 컴포넌트 마운트 후 포스트 목록 요청
     useEffect(() => {
         dispatch(getPosts());

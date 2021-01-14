@@ -54,7 +54,6 @@ export const handleAsyncActions = (type, key, keepData = false) => {
     return (state, action) => {
         switch (action.type) {
             case type:
-                console.log(keepData, state[key].data)
                 return {
                     ...state,
                     [key]: reducerUtils.loading(keepData ? state[key].data : null)
